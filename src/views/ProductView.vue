@@ -1,5 +1,5 @@
 <template>
-    <div v-if="products">
+    <div v-if="products" class="products">
         <ProductComp v-for="product of products" :key="product.id" :product="product"/>
     </div>
     <div v-else>loading</div>
@@ -19,3 +19,9 @@
     }
     
 </script>
+<style scoped>
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+  }
+</style>
